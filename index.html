@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>いすみ市議会ウォッチ</title>
+<meta name="description" content="いすみ議会だより20年分（第1〜84号）をもとに、いすみ市議会の顔ぶれと議員の一般質問を見える化する市民向けサイトです。">
+<meta property="og:title" content="いすみ市議会ウォッチ">
+<meta property="og:description" content="議会だより20年分から、いすみ市議会の「いま」を数字で見る。">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="いすみ市議会ウォッチ トップへ">
+      <img src="favicon.svg" alt="" width="32" height="32">
+      <span>いすみ市議会<b>ウォッチ</b></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">メニュー</button>
+    <nav id="nav" class="nav">
+      <a href="#numbers">数字で見る</a>
+      <a href="#members">議員の一般質問</a>
+      <a href="#youth">若い世代の論点</a>
+      <a href="#method">データの見方</a>
+      <a href="#join">関わる</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section id="top" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">千葉県いすみ市 ／ 市民による議会の見える化</p>
+        <h1>投票のあとの4年間を、<br>いっしょに見ていく。</h1>
+        <p class="lead">いすみ議会だより20年分（2006〜2026年、第1〜84号）を読み込み、議会の顔ぶれと議員の一般質問を数字にしました。誰かを責めるためではなく、次の選挙で考える材料にするためのサイトです。</p>
+        <div class="cta">
+          <a class="btn primary" href="#members">議員の一般質問を見る</a>
+          <a class="btn" href="#method">数え方を確認する</a>
+        </div>
+      </div>
+      <dl class="kpis" aria-label="主な数字">
+        <div><dt>市議会の定数</dt><dd>18<small>人</small></dd><p>2006年は26人、2010年は20人</p></div>
+        <div><dt>2022年選挙後の平均年齢</dt><dd>63.4<small>歳</small></dd><p>外部サイト「政治山」より</p></div>
+        <div><dt>2006年から続けている議員</dt><dd>7<small>人</small></dd><p>定数の約4割</p></div>
+        <div><dt>直近4年で一般質問0回</dt><dd>6<small>人 / 18人</small></dd><p>議長を含む（議長は慣例で質問しない）</p></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <p class="label">ABOUT</p>
+      <h2>このサイトについて</h2>
+      <div class="three">
+        <article><h3>読む</h3><p>市が発行する「いすみ議会だより」を、20年分すべて読み、一般質問・議決・議員名簿を記録しました。</p></article>
+        <article><h3>数える</h3><p>一般質問をした回数、改選ごとの入れ替わり、議決の結果を、同じルールで数えています。</p></article>
+        <article><h3>ひらく</h3><p>数え方と出典をすべて載せています。誤りに気づいたら教えてください。直します。</p></article>
+      </div>
+      <p class="neutral">このサイトは、特定の政党・候補者を支持したり推薦したりするものではありません。数字は議員の活動の一部しか表しておらず、人柄や考え方を評価するものでもありません。</p>
+    </div>
+  </section>
+
+  <section id="numbers" class="section alt">
+    <div class="wrap">
+      <p class="label">NUMBERS</p>
+      <h2>数字で見る、いすみ市議会の20年</h2>
+
+      <div class="grid2">
+        <figure class="panel">
+          <figcaption><h3>議員の定数は46人から18人へ</h3><p>定数の削減は議会自身が決めました。席が減るほど、新しい人が入れる枠も狭くなります。</p></figcaption>
+          <div class="hbars" id="seats"></div>
+        </figure>
+        <figure class="panel">
+          <figcaption><h3>改選で新しく入った議員は2〜5人</h3><p>20年で一番大きく入れ替わったのは2018年の5人です。</p></figcaption>
+          <div class="hbars" id="newcomers"></div>
+        </figure>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><b>3件</b><span>20年間で否決された議案・意見書。市長が出した議案は、ほぼすべて原案どおり可決されています。</span></div>
+        <div class="fact"><b>非公開</b><span>議員一人ひとりの賛成・反対。議会だよりには「賛成多数」とだけ書かれ、誰が反対したかはわかりません。</span></div>
+        <div class="fact"><b>2025年〜</b><span>本会議のYouTube中継が始まりました。議会報告会や若者との意見交換会の記録は、議会だよりには見当たりません。</span></div>
+        <div class="fact"><b>約7割</b><span>2022〜26年の一般質問112回のうち、2018年以降に入った議員6人が担った割合（79回）。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="members" class="section">
+    <div class="wrap">
+      <p class="label">MEMBERS</p>
+      <h2>議員の一般質問</h2>
+      <p class="sub">2022〜26年任期の18人について、任期ごとに「一般質問をした定例会の数」を示しています。1任期の定例会はおよそ15〜16回です。</p>
+
+      <div class="toolbar" role="search">
+        <label class="field"><span>名前で探す</span><input id="q" type="search" placeholder="例：山口"></label>
+        <label class="field"><span>初当選</span>
+          <select id="since">
+            <option value="all">すべて</option>
+            <option value="2006">2006年以前から</option>
+            <option value="2010">2010〜2017年</option>
+            <option value="2018">2018年以降</option>
+          </select>
+        </label>
+        <label class="field"><span>並べ替え</span>
+          <select id="sort">
+            <option value="recent">直近4年の回数が多い順</option>
+            <option value="total">20年の合計が多い順</option>
+            <option value="since">初当選が新しい順</option>
+            <option value="kana">五十音順</option>
+          </select>
+        </label>
+        <div class="seg" role="group" aria-label="表示の切り替え">
+          <button id="v-card" aria-pressed="true">カード</button>
+          <button id="v-table" aria-pressed="false">表</button>
+        </div>
+      </div>
+
+      <ul class="legend">
+        <li><i class="sw on"></i>一般質問あり（回数）</li>
+        <li><i class="sw zero"></i>0回</li>
+        <li><i class="sw off"></i>その任期は在籍していない</li>
+      </ul>
+
+      <div id="cards" class="cards"></div>
+      <div id="tablewrap" class="tablewrap" hidden></div>
+      <p class="count" id="count"></p>
+    </div>
+  </section>
+
+  <section id="youth" class="section alt">
+    <div class="wrap">
+      <p class="label">FOR THE NEXT GENERATION</p>
+      <h2>若い世代から見た論点</h2>
+      <div class="points">
+        <article><span>01</span><h3>同じ顔ぶれが長く続いている</h3><p>2006年に当選した26人のうち7人が、2022〜26年の任期にもいます。議会だよりに載った2006年の年齢から推定すると、この7人は2026年におよそ64〜84歳です。</p></article>
+        <article><span>02</span><h3>議員の仕事が見えにくい</h3><p>直近4年で、18人中6人が一般質問を一度もしていません。委員会での発言は、この数字に入っていません。</p></article>
+        <article><span>03</span><h3>新しく入った人が議会を動かしている</h3><p>2018年と2022年に入った議員が、直近の一般質問の多くを担っています。テーマも空き家、民泊のゴミ、通学定期、部活動の地域移行など暮らしに近い話題です。</p></article>
+        <article><span>04</span><h3>誰が賛成したか、わからない</h3><p>議員別の賛否一覧は、多くの議会で公開されています。いすみ市議会でも公開されれば、有権者は判断しやすくなります。</p></article>
+        <article><span>05</span><h3>若者の暮らしの課題はまだ手薄</h3><p>奨学金の返還支援、高校生の通学費、18歳への消費者教育、投票所の工夫など、質問はありますが続いていません。</p></article>
+      </div>
+
+      <div class="panel topics">
+        <h3>これまでにあった、若い世代に関わる一般質問</h3>
+        <ul>
+          <li><b>主権者教育・18歳選挙権</b>田井議員（2015年、第40号）</li>
+          <li><b>投票率の向上・投票所</b>山口議員（第43号）、田井議員（第72号、第81号で移動期日前投票所）</li>
+          <li><b>奨学金と若者の地方定着</b>高森議員（第63号）、奨学金返還支援の創設：田井議員（第70号）</li>
+          <li><b>18歳成人への消費者教育</b>山口議員（第67号）</li>
+          <li><b>高校生の通学定期券の購入費補助</b>峰島議員（第84号）</li>
+          <li><b>若者世帯の転出</b>岩井議員（第45号）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="method" class="section">
+    <div class="wrap">
+      <p class="label">METHOD</p>
+      <h2>データの見方と出典</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>数え方</h3>
+          <ul class="dots">
+            <li>議会だよりの一般質問欄に名前が載った議員を、定例会ごとに数えました。1回の定例会で質問すれば「1回」です。</li>
+            <li>第51号（2018年8月ごろ）と第80号（2025年11月ごろ）は未入手のため、その回は数に入っていません。</li>
+            <li>議長は慣例として一般質問をしません。</li>
+            <li>委員会での発言、議案への質疑、地域での活動はこの数字に含まれません。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>年齢について</h3>
+          <ul class="dots">
+            <li>議会だよりに議員の年齢が載っているのは第5号（2006年12月）だけです。</li>
+            <li>このサイトの「2026年の推定年齢」は「2006年の年齢＋20」で出した目安で、1歳前後ずれることがあります。</li>
+            <li>2006年より後に初当選した議員の年齢は載せていません。</li>
+            <li>平均年齢63.4歳は、外部サイト「政治山」による2022年選挙後の数字です。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel sources">
+        <h3>出典</h3>
+        <ul class="dots">
+          <li>いすみ市議会「いすみ議会だより」第1号〜第84号（2006〜2026年）</li>
+          <li><a href="https://www.city.isumi.lg.jp/" rel="noopener">いすみ市公式サイト</a></li>
+          <li>政治山（2022年いすみ市議会議員選挙の平均年齢）</li>
+        </ul>
+        <p class="updated">データの集計時点：2026年11月（2022〜26年任期の終わりまで）。2026年11月の市議会議員選挙の結果は反映していません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="section alt">
+    <div class="wrap">
+      <p class="label">JOIN</p>
+      <h2>議会と関わる方法</h2>
+      <div class="three">
+        <article><h3>傍聴する</h3><p>本会議は誰でも傍聴できます。2025年からはYouTubeでも中継されています。</p></article>
+        <article><h3>議会だよりを読む</h3><p>年4回、定例会のあとに発行されます。一般質問の要旨と議決の結果が載っています。</p></article>
+        <article><h3>選挙に関わる</h3><p>投票はもちろん、立候補も選択肢です。市議会議員には25歳から立候補できます。</p></article>
+      </div>
+      <p class="neutral">数字の誤りや、追加したほうがよい情報に気づいたら、このサイトのGitHubリポジトリの Issues から知らせてください。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><b>いすみ市議会ウォッチ</b></p>
+    <p>掲載データは、いすみ市が公開している「いすみ議会だより」などの公開情報をもとに集計したものです。特定の政党・候補者を支持・推薦するものではありません。</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
